@@ -14,7 +14,7 @@ def get_services(namespace, suspended=False):
 
     print("Retrieving services for namespace: {}".format(namespace))
     response = requests.get(url, headers=headers, params=payload)
-    data = response.json()
+    data += response.json()
 
     # Get any additional pages
     while len(response.json()) == limit:
