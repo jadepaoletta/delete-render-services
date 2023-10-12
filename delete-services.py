@@ -52,7 +52,7 @@ def delete_service(service_id):
     if delete == "q":
         print("Exiting...")
         sys.exit()
-    else:
+    elif delete == "n":
         print("Skipping deleting service: {}\n".format(service_id))
     
 
